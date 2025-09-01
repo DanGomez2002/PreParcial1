@@ -1,0 +1,89 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: rgb(109, 253, 109);
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+main {
+    background-color: black;
+    height: 70vh;
+}
+
+#rojo {
+    background-color: red;
+    height: 10%;
+}
+
+#superCaja {
+    height: 90%;
+    background-color: rgb(255, 0, 157);
+}
+
+#amarrillo {
+    background-color: yellow;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.verde {
+    flex: 1;
+    margin:5%;
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+}
+.gris{
+    flex: 1;
+    margin: 1%;  
+    background-color: gray;
+
+}
+
+
+#azul {
+    background-color: blue;
+    height: 10%;
+}
+
+footer {
+    background-color: blueviolet;
+    height: 15vh;
+}
+/* Media query para pantallas de 768px o más anchas */
+@media (min-width: 768px) {
+  #superCaja {
+    display: flex; /* 1. Convierte a superCaja en un contenedor flex */
+    /* flex-direction: row; es el valor por defecto, así que no es necesario ponerlo */
+  }
+
+  #azul {
+    width: 33.33%;   /* 2. Ocupa un tercio del ancho */
+    order: -1;       /* 3. Se mueve a la izquierda (al principio) */
+    height: auto;    /* 4. Resetea la altura para que ocupe el 100% del padre */
+  }
+
+  #amarrillo {
+    width: 66.67%;   /* 5. Ocupa los dos tercios restantes */
+    height: auto;    /* 4. Resetea la altura para que ocupe el 100% del padre */
+  }
+  .verde {
+    flex-direction: row;
+}
+#cajita{
+    height: 20px;
+    width: 20px;
+    background-color: yellow;
+    border:2px solid red;
+}
+}
